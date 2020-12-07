@@ -1,4 +1,5 @@
 import 'package:animation/src/basics/01_animated_container.dart';
+import 'package:animation/src/misc/focus_image.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,10 +22,20 @@ final basicDemos = [
   )
 ];
 
+final miscDemos = [
+  Demo(
+    name: 'Focus Image',
+    route: FocusImageDemo.routeName,
+    builder: (context) => FocusImageDemo(),
+  ),
+];
+
 final basicDemoRoutes = Map.fromEntries(basicDemos.map((d) => MapEntry(d.route, d.builder)));
+final miscDemoRoutes = Map.fromEntries(miscDemos.map((d) => MapEntry(d.route, d.builder)));
 
 final allRoutes = <String, WidgetBuilder>{
   ...basicDemoRoutes,
+  ...miscDemoRoutes,
 };
 
 class MyApp extends StatelessWidget {
@@ -61,6 +72,8 @@ class MyHomePage extends StatelessWidget {
           children: [
             ListTile(title: Text('Basics', style: headerStyle)),
             ...basicDemos.map((d) => DemoTile(d)),
+            ListTile(title: Text('Misc', style: headerStyle)),
+            ...miscDemos.map((d) => DemoTile(d)),
           ]
       ),
     );

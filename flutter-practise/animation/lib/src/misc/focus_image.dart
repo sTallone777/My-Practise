@@ -16,11 +16,12 @@ class Grid extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       body: GridView.builder(
-        itemCount: 40,
+        padding: EdgeInsets.all(100.0),
+        itemCount: 20,
         gridDelegate:
           SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
         itemBuilder:(context, index) {
-          return (index >= 20)
+          return (index >= 10)
               ? SmallCard('assets/eat_cape_town_sm.jpg')
               : SmallCard('assets/eat_new_orleans_sm.jpg');
         },

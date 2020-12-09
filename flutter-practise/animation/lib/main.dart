@@ -2,6 +2,8 @@ import 'package:animation/src/basics/01_animated_container.dart';
 import 'package:animation/src/misc/focus_image.dart';
 import 'package:flutter/material.dart';
 
+import 'src/basics/logo_app.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -19,7 +21,12 @@ final basicDemos = [
     name: 'AnimatedContainer',
     route: AnimatedContainerDemo.routeName,
     builder: (context) => AnimatedContainerDemo(),
-  )
+  ),
+  Demo(
+    name: 'LogoApp',
+    route: LogoApp.routeName,
+    builder: (context) => LogoApp(),
+  ),
 ];
 
 final miscDemos = [

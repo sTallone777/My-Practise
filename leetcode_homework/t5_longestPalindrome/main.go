@@ -3,23 +3,40 @@ package main
 import "fmt"
 
 func longestPalindrome(s string) string {
-	pm := make(map[rune]int)
+	if s == "" {
+		return ""
+	}
+
 	retStr := ""
-	for i, v := range s {
-		if _, ok := pm[v]; ok {
-			if len(s[pm[v]:i+1]) > len(retStr) {
-				retStr = s[pm[v] : i+1]
+
+	for i := 0; i < len(s)-1; i++ {
+		for j := i + 1; j < len(s); j++ {
+			if s[i] == s[j] && len(s[i:j+1]) > len(retStr) {
+				tmpStr := s[i : j+1]
+				isOk := true
+				for k := 0; k < len(tmpStr)>>1; k++ {
+					if tmpStr[k] != tmpStr[len(tmpStr)-1-k] {
+						isOk = false
+						break
+					}
+				}
+				if isOk {
+					retStr = tmpStr
+				}
 			}
-		} else {
-			pm[v] = i
 		}
 	}
-	if len(retStr) > 1 {
-		return retStr
+
+	if retStr == "" {
+		return string(s[0])
 	}
-	return ""
+	return retStr
 }
 
 func main() {
-	fmt.Println(longestPalindrome("cbbd"))
+	// fmt.Println(longestPalindrome("aacabdkacaa"))
+	// fmt.Println(longestPalindrome("ccc"))
+	// fmt.Println(longestPalindrome("babac"))
+	fmt.Println(longestPalindrome("c"))
+	// fmt.Println(longestPalindrome("abbcccbbbcaaccbababcbcabca"))
 }

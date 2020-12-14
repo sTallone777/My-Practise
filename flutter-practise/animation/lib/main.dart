@@ -1,4 +1,5 @@
 import 'package:animation/src/basics/01_animated_container.dart';
+import 'package:animation/src/misc/animated_positioned.dart';
 import 'package:animation/src/misc/focus_image.dart';
 import 'package:flutter/material.dart';
 
@@ -34,6 +35,11 @@ final miscDemos = [
     name: 'Focus Image',
     route: FocusImageDemo.routeName,
     builder: (context) => FocusImageDemo(),
+  ),
+  Demo(
+      name: 'AnimatedPositioned',
+      route: AnimatedPositionedDemo.routeName,
+      builder: (context) => AnimatedPositionedDemo()
   ),
 ];
 

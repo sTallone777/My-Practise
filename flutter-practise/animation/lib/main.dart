@@ -3,7 +3,8 @@ import 'package:animation/src/misc/animated_positioned.dart';
 import 'package:animation/src/misc/focus_image.dart';
 import 'package:flutter/material.dart';
 
-import 'src/basics/logo_app.dart';
+import 'package:animation/src/basics/logo_app.dart';
+import 'package:animation/src/misc/curve_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -40,6 +41,11 @@ final miscDemos = [
       name: 'AnimatedPositioned',
       route: AnimatedPositionedDemo.routeName,
       builder: (context) => AnimatedPositionedDemo()
+  ),
+  Demo(
+      name: 'CurvePage',
+      route: AnimatedPositionedDemo.routeName,
+      builder: (context) => CurvePage()
   ),
 ];
 

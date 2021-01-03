@@ -1,6 +1,8 @@
 import 'package:animation/src/basics/01_animated_container.dart';
 import 'package:animation/src/misc/animated_positioned.dart';
+import 'package:animation/src/misc/combo_animate.dart';
 import 'package:animation/src/misc/focus_image.dart';
+import 'package:animation/src/misc/parallel_animate.dart';
 import 'package:flutter/material.dart';
 
 import 'package:animation/src/basics/logo_app.dart';
@@ -44,8 +46,18 @@ final miscDemos = [
   ),
   Demo(
       name: 'CurvePage',
-      route: AnimatedPositionedDemo.routeName,
+      route: CurvePage.routeName,
       builder: (context) => CurvePage()
+  ),
+  Demo(
+      name: 'Parallel',
+      route: ParallelAnimate.routeName,
+      builder: (context) => ParallelAnimate()
+  ),
+  Demo(
+      name: 'ComboAnimate',
+      route: StaggerRoute.routeName,
+      builder: (context) => StaggerRoute()
   ),
 ];
 

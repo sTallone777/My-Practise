@@ -14,7 +14,7 @@ class _StaggerRouteState extends State<StaggerRoute> with TickerProviderStateMix
     super.initState();
 
     _controller = AnimationController(
-        duration: const Duration(milliseconds: 2000),
+        duration: const Duration(milliseconds: 4000),
         vsync: this
     );
     _controller.addStatusListener((status) {
@@ -42,7 +42,7 @@ class _StaggerRouteState extends State<StaggerRoute> with TickerProviderStateMix
             decoration: BoxDecoration(
               color: Colors.black.withOpacity(0.1),
               border: Border.all(
-                color:  Colors.black.withOpacity(0.5),
+                color:  Colors.black.withOpacity(0.1),
               ),
             ),
             //调用我们定义的交织动画Widget
@@ -67,7 +67,7 @@ class StaggerAnimation extends StatelessWidget {
         parent: controller,
         curve: Interval(
           0.0, 0.6, //间隔，前60%的动画时间
-          curve: Curves.ease,
+          curve: Curves.easeInOutQuart,
         ),
       ),
     );
@@ -80,20 +80,20 @@ class StaggerAnimation extends StatelessWidget {
         parent: controller,
         curve: Interval(
           0.0, 0.6,//间隔，前60%的动画时间
-          curve: Curves.ease,
+          curve: Curves.bounceIn,
         ),
       ),
     );
 
     padding = Tween<EdgeInsets>(
-      begin:EdgeInsets.only(left: .0),
+      begin:EdgeInsets.only(left: 0.0),
       end:EdgeInsets.only(left: 100.0),
     ).animate(
       CurvedAnimation(
         parent: controller,
         curve: Interval(
           0.6, 1.0, //间隔，后40%的动画时间
-          curve: Curves.ease,
+          curve: Curves.bounceIn,
         ),
       ),
     );

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1074427071587",
+    "firebase_url": "https://ranter-d12eb.firebaseio.com",
+    "project_id": "ranter-d12eb",
+    "storage_bucket": "ranter-d12eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074427071587:android:e363dbb6b3be1c12953c56",
+        "android_client_info": {
+          "package_name": "github.nisrulz.googlesignin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1074427071587-tp5pn6mbs2hqoite9vggbmp3hl7adhsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnt0bWgtJKT9ihW__2a8CZfqNNg7qCVB0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1074427071587-tp5pn6mbs2hqoite9vggbmp3hl7adhsd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

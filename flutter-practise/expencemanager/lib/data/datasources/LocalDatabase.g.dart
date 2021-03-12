@@ -1841,6 +1841,16 @@ abstract class _$LocalDatabase extends GeneratedDatabase {
   $TagTable get tag => _tag ??= $TagTable(this);
   $WalletTable _wallet;
   $WalletTable get wallet => _wallet ??= $WalletTable(this);
+  AccountBookDao _accountBookDao;
+  AccountBookDao get accountBookDao =>
+      _accountBookDao ??= AccountBookDao(this as LocalDatabase);
+  CategoryDao _categoryDao;
+  CategoryDao get categoryDao =>
+      _categoryDao ??= CategoryDao(this as LocalDatabase);
+  EntryDao _entryDao;
+  EntryDao get entryDao => _entryDao ??= EntryDao(this as LocalDatabase);
+  WalletDao _walletDao;
+  WalletDao get walletDao => _walletDao ??= WalletDao(this as LocalDatabase);
   @override
   Iterable<TableInfo> get allTables => allSchemaEntities.whereType<TableInfo>();
   @override
